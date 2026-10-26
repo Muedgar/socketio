@@ -14,6 +14,7 @@
     --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
@@ -192,6 +193,12 @@
   .grid {
     display: grid;
   }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-\[10\%\] {
     height: 10%;
   }
@@ -240,6 +247,9 @@
   }
   .bg-slate-50 {
     background-color: var(--color-slate-50);
+  }
+  .bg-slate-200 {
+    background-color: var(--color-slate-200);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);

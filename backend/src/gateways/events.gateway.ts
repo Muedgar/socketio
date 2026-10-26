@@ -121,6 +121,16 @@ handleConnection(client: AuthedSocket) {
 });
   }
 
+  @SubscribeMessage('isTyping')
+  onIsTyping(
+    @ConnectedSocket() client: AuthedSocket,
+    @MessageBody() message: string
+  ) {
+    this.server.emit('isTyping', {
+      message
+    })
+  }
+
   @SubscribeMessage('send_object')
   onSendObject(@ConnectedSocket() client: AuthedSocket) {
     client.emit('server_object', {
